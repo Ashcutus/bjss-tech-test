@@ -13,11 +13,11 @@ describe('Clicking the Red button changes the ID\s on the Red, Blue & Green butt
       .should('be.visible')
   })
   it('Stores the original ID of the Blue button', () => {
-      cy.get('[class=button]')
-        .should('exist')
-        .then(($element) => {
-            blueId = $element.attr('id')
-        })
+    cy.get('[class=button]')
+      .should('exist')
+      .then(($element) => {
+        blueId = $element.attr('id')
+    })
   })
   it('Stores the original ID of the Red button', () => {
     cy.get('[class="button alert"]')
@@ -34,9 +34,9 @@ describe('Clicking the Red button changes the ID\s on the Red, Blue & Green butt
       })
   })
   it('Clicks the Red button', () => {
-     cy.get('[class="button alert"]')
-       .should('exist')
-       .click()
+    cy.get('[class="button alert"]')
+      .should('exist')
+      .click()
     cy.get('h3')
       .contains('Challenging DOM')
       .should('be.visible')
@@ -52,14 +52,14 @@ describe('Clicking the Red button changes the ID\s on the Red, Blue & Green butt
     cy.get('[class="button alert"]')
     .should('exist')
     .then(($element) => {
-        expect($element.attr('id')).not.to.equal(redId)
+      expect($element.attr('id')).not.to.equal(redId)
     })
   })
   it('Checks the original ID of the Green button does not exist', () => {
     cy.get('[class="button success"]')
     .should('exist')
     .then(($element) => {
-        expect($element.attr('id')).not.to.equal(greenId)
+      expect($element.attr('id')).not.to.equal(greenId)
     })
   })
 })
