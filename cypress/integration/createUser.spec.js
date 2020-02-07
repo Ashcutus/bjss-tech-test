@@ -3,7 +3,7 @@ const userSalary = Cypress._.random(20000, 45000)
 const userAge = Cypress._.random(18, 65)
 
 describe('Create a new user and confirm the user has been created', () => {
-  it('Sends the request and confirms the user was generated', () => {
+  it('Sends a request and confirms the user was generated', () => {
     const options = {
       "name": userName,
       "salary": userSalary,
