@@ -1,4 +1,4 @@
-# BJSS Technical Test Readme
+# Simple Cypress
 
 ## Installation & Running
 - Clone the repo
